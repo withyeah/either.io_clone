@@ -1,0 +1,19 @@
+{% extends 'ei/base.html' %}
+
+{% block body %}
+
+
+
+<div class='my-5 container'>
+    {% for question in questions %}
+
+    <a class="btn btn-outline-secondary btn-lg btn-block" href="{% url 'ei:detail' question.pk %}"><h2>{{ question.title }}</h2></a>
+{% endfor %}
+</div>
+
+
+
+
+
+
+{% endblock %}
